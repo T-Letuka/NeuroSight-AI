@@ -1,0 +1,30 @@
+,point_x_norm,point_x_norm,point_y_norm,point_y_norm
+,mean,std,mean,std
+class,,,,
+Astrocytoma T1,0.485,0.086,0.52,0.139
+Astrocytoma T1C+,0.485,0.087,0.541,0.136
+Astrocytoma T2,0.493,0.085,0.518,0.138
+Ependymoma T1,0.529,0.083,0.582,0.092
+Ependymoma T1C+,0.528,0.059,0.596,0.089
+Ependymoma T2,0.5,0.058,0.583,0.096
+Glioma T1,0.499,0.078,0.561,0.07
+Glioma T1C+,0.496,0.073,0.545,0.08
+Glioma T2,0.509,0.072,0.554,0.077
+Hemangiopericytoma T1,0.587,0.108,0.603,0.138
+Hemangiopericytoma T1C+,0.565,0.096,0.546,0.178
+Hemangiopericytoma T2,0.58,0.102,0.539,0.146
+Meningioma T1,0.513,0.125,0.529,0.119
+Meningioma T1C+,0.53,0.119,0.521,0.13
+Meningioma T2,0.53,0.125,0.509,0.123
+Neurocytoma T1,0.508,0.042,0.523,0.073
+Neurocytoma T1C+,0.507,0.045,0.546,0.08
+Neurocytoma T2,0.494,0.041,0.499,0.071
+Oligodendroglioma T1,0.496,0.111,0.376,0.127
+Oligodendroglioma T1C+,0.477,0.103,0.397,0.122
+Oligodendroglioma T2,0.489,0.122,0.392,0.143
+Other T1,0.462,0.14,0.538,0.104
+Other T1C+,0.443,0.114,0.536,0.118
+Other T2,0.465,0.144,0.532,0.117
+Schwannoma T1,0.441,0.06,0.536,0.068
+Schwannoma T1C+,0.445,0.064,0.529,0.068
+Schwannoma T2,0.442,0.072,0.533,0.072
