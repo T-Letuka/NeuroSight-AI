@@ -1,31 +1,31 @@
 tumor_type,weighting,class,count
 Astrocytoma,T1,Astrocytoma T1,396
+Astrocytoma,T1C+,Astrocytoma T1C+,441
 Astrocytoma,T2,Astrocytoma T2,281
-Astrocytoma T1C+,Unknown,Astrocytoma T1C+,441
 Ependymoma,T1,Ependymoma T1,313
+Ependymoma,T1C+,Ependymoma T1C+,374
 Ependymoma,T2,Ependymoma T2,350
-Ependymoma T1C+,Unknown,Ependymoma T1C+,374
 Glioma,T1,Glioma T1,522
+Glioma,T1C+,Glioma T1C+,540
 Glioma,T2,Glioma T2,392
-Glioma T1C+,Unknown,Glioma T1C+,540
 Hemangiopericytoma,T1,Hemangiopericytoma T1,178
+Hemangiopericytoma,T1C+,Hemangiopericytoma T1C+,307
 Hemangiopericytoma,T2,Hemangiopericytoma T2,118
-Hemangiopericytoma T1C+,Unknown,Hemangiopericytoma T1C+,307
 Meningioma,T1,Meningioma T1,636
+Meningioma,T1C+,Meningioma T1C+,977
 Meningioma,T2,Meningioma T2,458
-Meningioma T1C+,Unknown,Meningioma T1C+,977
 Neurocytoma,T1,Neurocytoma T1,190
+Neurocytoma,T1C+,Neurocytoma T1C+,254
 Neurocytoma,T2,Neurocytoma T2,174
-Neurocytoma T1C+,Unknown,Neurocytoma T1C+,254
 Normal,T1,Normal T1,415
+Normal,T1C+,Normal T1C+,264
 Normal,T2,Normal T2,379
-Normal T1C+,Unknown,Normal T1C+,264
 Oligodendroglioma,T1,Oligodendroglioma T1,221
+Oligodendroglioma,T1C+,Oligodendroglioma T1C+,192
 Oligodendroglioma,T2,Oligodendroglioma T2,137
-Oligodendroglioma T1C+,Unknown,Oligodendroglioma T1C+,192
 Other,T1,Other T1,412
+Other,T1C+,Other T1C+,756
 Other,T2,Other T2,365
-Other T1C+,Unknown,Other T1C+,756
 Schwannoma,T1,Schwannoma T1,363
+Schwannoma,T1C+,Schwannoma T1C+,564
 Schwannoma,T2,Schwannoma T2,309
-Schwannoma T1C+,Unknown,Schwannoma T1C+,564

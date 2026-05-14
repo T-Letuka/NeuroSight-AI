@@ -43,7 +43,7 @@ NORMAL_CLASSES = frozenset({"Normal T1", "Normal T1C+", "Normal T2"})
 IMAGE_SIZE     = 512
 
 
-_WEIGHTING_RE = re.compile(r"\b(T1C\+|T1|T2)\b")
+_WEIGHTING_RE = re.compile(r"(T1C\+|T1|T2)")
  
 
 def extract_weighting(class_label: str) -> str:
