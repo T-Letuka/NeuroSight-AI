@@ -1,226 +1,98 @@
-============================================================
-  NEUROSIGHT — DATASET INSPECTION
-============================================================
+==============================================================
+  NEUROSIGHT DATASET INSPECTION + MANIFEST BUILD
+==============================================================
 
-📄 Metadata entries     : 11,300
-🖼️  Files found on disk  : 11,300
+ Metadata entries    : 11,300
+ Loaded into manifest: 11,278
+ Missing on disk     : 22
+   → Saved to missing_files.csv
+   Known cause: em-dash (–) vs hyphen (-) in filenames
+   Affected (first 3): ['Glioma T1C+/T1C+ - Diffuse midline glioma, H3 K27M–mutant ventricle , frontal 001.jpg', 'Glioma T1C+/T1C+ - Diffuse midline glioma, H3 K27M–mutant ventricle , frontal 002.jpg', 'Glioma T1C+/T1C+ - Diffuse midline glioma, H3 K27M–mutant ventricle , frontal 003.jpg']
 
-🔍 Cross-reference check:
-   In JSON, missing on disk : 22
-   On disk, missing in JSON : 22
-   ⚠️  Saved missing list → missing_files.csv
-
-────────────────────────────────────────────────────────────
-  CLASS DISTRIBUTION (30 classes)
-────────────────────────────────────────────────────────────
-        tumor_type weighting                   class  count
-       Astrocytoma        T1          Astrocytoma T1    396
-       Astrocytoma      T1C+        Astrocytoma T1C+    441
-       Astrocytoma        T2          Astrocytoma T2    281
-        Ependymoma        T1           Ependymoma T1    313
-        Ependymoma      T1C+         Ependymoma T1C+    374
-        Ependymoma        T2           Ependymoma T2    350
-            Glioma        T1               Glioma T1    522
-            Glioma      T1C+             Glioma T1C+    549
-            Glioma        T2               Glioma T2    405
-Hemangiopericytoma        T1   Hemangiopericytoma T1    178
-Hemangiopericytoma      T1C+ Hemangiopericytoma T1C+    307
-Hemangiopericytoma        T2   Hemangiopericytoma T2    118
-        Meningioma        T1           Meningioma T1    636
-        Meningioma      T1C+         Meningioma T1C+    977
-        Meningioma        T2           Meningioma T2    458
-       Neurocytoma        T1          Neurocytoma T1    190
-       Neurocytoma      T1C+        Neurocytoma T1C+    254
-       Neurocytoma        T2          Neurocytoma T2    174
-            Normal        T1               Normal T1    415
-            Normal      T1C+             Normal T1C+    264
-            Normal        T2               Normal T2    379
- Oligodendroglioma        T1    Oligodendroglioma T1    221
- Oligodendroglioma      T1C+  Oligodendroglioma T1C+    192
- Oligodendroglioma        T2    Oligodendroglioma T2    137
-             Other        T1                Other T1    412
-             Other      T1C+              Other T1C+    756
-             Other        T2                Other T2    365
-        Schwannoma        T1           Schwannoma T1    363
-        Schwannoma      T1C+         Schwannoma T1C+    564
-        Schwannoma        T2           Schwannoma T2    309
-
-────────────────────────────────────────────────────────────
-  HIGH-LEVEL SUMMARY
-────────────────────────────────────────────────────────────
-  Total images            : 11,300
-  Unique classes          : 30
-  Unique tumor types      : 10
-  MRI weightings          : ['T1', 'T1C+', 'T2']
-  Normal images           : 1,058
-  Abnormal images         : 10,242
-  Images with location tag: 9,312
-  Files verified on disk  : 11,278 / 11,300
-
-────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────
   IMAGE DIMENSIONS
-────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────
  width  height  count
-   512     512  11300
-  ✅ All images are uniformly 512×512
+   512     512  11278
+   All images uniformly 512×512
 
-────────────────────────────────────────────────────────────
-  LESION POINT STATISTICS (abnormal classes only)
-────────────────────────────────────────────────────────────
-  X  — mean: 253.8  std: 52.9  min: 101  max: 403
-  Y  — mean: 272.4  std: 60.3  min: 65  max: 460
+──────────────────────────────────────────────────────────────
+  CLASS DISTRIBUTION (30 classes)
+──────────────────────────────────────────────────────────────
+             tumor_type weighting                   class  count
+            Astrocytoma        T1          Astrocytoma T1    396
+            Astrocytoma        T2          Astrocytoma T2    281
+       Astrocytoma T1C+   Unknown        Astrocytoma T1C+    441
+             Ependymoma        T1           Ependymoma T1    313
+             Ependymoma        T2           Ependymoma T2    350
+        Ependymoma T1C+   Unknown         Ependymoma T1C+    374
+                 Glioma        T1               Glioma T1    522
+                 Glioma        T2               Glioma T2    392
+            Glioma T1C+   Unknown             Glioma T1C+    540
+     Hemangiopericytoma        T1   Hemangiopericytoma T1    178
+     Hemangiopericytoma        T2   Hemangiopericytoma T2    118
+Hemangiopericytoma T1C+   Unknown Hemangiopericytoma T1C+    307
+             Meningioma        T1           Meningioma T1    636
+             Meningioma        T2           Meningioma T2    458
+        Meningioma T1C+   Unknown         Meningioma T1C+    977
+            Neurocytoma        T1          Neurocytoma T1    190
+            Neurocytoma        T2          Neurocytoma T2    174
+       Neurocytoma T1C+   Unknown        Neurocytoma T1C+    254
+                 Normal        T1               Normal T1    415
+                 Normal        T2               Normal T2    379
+            Normal T1C+   Unknown             Normal T1C+    264
+      Oligodendroglioma        T1    Oligodendroglioma T1    221
+      Oligodendroglioma        T2    Oligodendroglioma T2    137
+ Oligodendroglioma T1C+   Unknown  Oligodendroglioma T1C+    192
+                  Other        T1                Other T1    412
+                  Other        T2                Other T2    365
+             Other T1C+   Unknown              Other T1C+    756
+             Schwannoma        T1           Schwannoma T1    363
+             Schwannoma        T2           Schwannoma T2    309
+        Schwannoma T1C+   Unknown         Schwannoma T1C+    564
 
-  Points within 10px of centre in abnormal classes: 125
-  ⚠️  These may need manual review:
-                                                                                               rel_path                 class  point_x  point_y
-                                   Astrocytoma T1\T1 - Pilocytic astrocytoma pineal , ventricle 006.jpg        Astrocytoma T1      252      264
-                                   Astrocytoma T1\T1 - Pilocytic astrocytoma pineal , ventricle 007.jpg        Astrocytoma T1      249      264
-                                   Astrocytoma T1\T1 - Pilocytic astrocytoma pineal , ventricle 008.jpg        Astrocytoma T1      249      265
-                                   Astrocytoma T1\T1 - Pilocytic astrocytoma pineal , ventricle 009.jpg        Astrocytoma T1      249      265
-                               Astrocytoma T1C+\T1C+ - Pilocytic astrocytoma pineal , ventricle 005.jpg      Astrocytoma T1C+      255      262
-                               Astrocytoma T1C+\T1C+ - Pilocytic astrocytoma pineal , ventricle 006.jpg      Astrocytoma T1C+      249      257
-                                        Astrocytoma T1C+\T1C+ - Pilocytic astrocytoma ventricle 047.jpg      Astrocytoma T1C+      247      255
-                                        Astrocytoma T1C+\T1C+ - Pilocytic astrocytoma ventricle 048.jpg      Astrocytoma T1C+      247      254
-Astrocytoma T1C+\T1C+ - Suprasellar optic pathway pilocytic astrocytoma suprasellar , ventricle 005.jpg      Astrocytoma T1C+      251      252
-                                     Astrocytoma T2\T2 - Pilocytic astrocytoma - supratentorial 001.jpg        Astrocytoma T2      248      257
-                                     Astrocytoma T2\T2 - Pilocytic astrocytoma - supratentorial 002.jpg        Astrocytoma T2      253      249
-                                   Astrocytoma T2\T2 - Pilocytic astrocytoma pineal , ventricle 010.jpg        Astrocytoma T2      248      259
-                                                          Glioma T1\T1 - Diffuse midline glioma 013.jpg             Glioma T1      256      255
-                                                          Glioma T1\T1 - Diffuse midline glioma 019.jpg             Glioma T1      255      262
-                         Glioma T1C+\T1C+ - Bilateral thalamic glioma basal ganglia , ventricle 010.jpg           Glioma T1C+      259      253
-                                    Glioma T1C+\T1C+ - Brainstem glioma brainstem , suprasellar 011.jpg           Glioma T1C+      265      253
-                                                      Glioma T1C+\T1C+ - Diffuse midline glioma 033.jpg           Glioma T1C+      250      255
-                                                      Glioma T1C+\T1C+ - Diffuse midline glioma 034.jpg           Glioma T1C+      250      258
-                                                      Glioma T1C+\T1C+ - Diffuse midline glioma 035.jpg           Glioma T1C+      248      251
-                                                      Glioma T1C+\T1C+ - Diffuse midline glioma 036.jpg           Glioma T1C+      248      247
-                                                      Glioma T1C+\T1C+ - Diffuse midline glioma 037.jpg           Glioma T1C+      249      259
-                                                      Glioma T1C+\T1C+ - Diffuse midline glioma 038.jpg           Glioma T1C+      249      260
-                                                      Glioma T1C+\T1C+ - Diffuse midline glioma 040.jpg           Glioma T1C+      248      248
-                                                      Glioma T1C+\T1C+ - Diffuse midline glioma 041.jpg           Glioma T1C+      248      249
-                                                      Glioma T1C+\T1C+ - Diffuse midline glioma 042.jpg           Glioma T1C+      247      249
-                                                      Glioma T1C+\T1C+ - Diffuse midline glioma 043.jpg           Glioma T1C+      250      249
-                  Glioma T1C+\T1C+ - Diffuse midline glioma, H3 K27M–mutant ventricle , frontal 003.jpg           Glioma T1C+      256      254
-                  Glioma T1C+\T1C+ - Diffuse midline glioma, H3 K27M–mutant ventricle , frontal 004.jpg           Glioma T1C+      257      254
-                  Glioma T1C+\T1C+ - Diffuse midline glioma, H3 K27M–mutant ventricle , frontal 005.jpg           Glioma T1C+      257      249
-                  Glioma T1C+\T1C+ - Diffuse midline glioma, H3 K27M–mutant ventricle , frontal 006.jpg           Glioma T1C+      256      255
-                      Glioma T1C+\T1C+ - Exophytic brainstem glioma posterior fossa , ventricle 011.jpg           Glioma T1C+      257      258
-                                          Glioma T2\T2 - Brainstem glioma brainstem , ventricle 025.jpg             Glioma T2      249      260
-                                          Glioma T2\T2 - Brainstem glioma brainstem , ventricle 029.jpg             Glioma T2      249      259
-                                                          Glioma T2\T2 - Diffuse midline glioma 011.jpg             Glioma T2      255      248
-                                                          Glioma T2\T2 - Diffuse midline glioma 012.jpg             Glioma T2      255      252
-                                                          Glioma T2\T2 - Diffuse midline glioma 014.jpg             Glioma T2      251      254
-                      Glioma T2\T2 - Diffuse midline glioma, H3 K27M–mutant ventricle , frontal 001.jpg             Glioma T2      257      254
-                      Glioma T2\T2 - Diffuse midline glioma, H3 K27M–mutant ventricle , frontal 002.jpg             Glioma T2      260      256
-                      Glioma T2\T2 - Diffuse midline glioma, H3 K27M–mutant ventricle , frontal 004.jpg             Glioma T2      262      257
-                      Glioma T2\T2 - Diffuse midline glioma, H3 K27M–mutant ventricle , frontal 006.jpg             Glioma T2      263      256
-                      Glioma T2\T2 - Diffuse midline glioma, H3 K27M–mutant ventricle , frontal 008.jpg             Glioma T2      265      260
-                      Glioma T2\T2 - Diffuse midline glioma, H3 K27M–mutant ventricle , frontal 013.jpg             Glioma T2      257      258
-               Hemangiopericytoma T1\T1 - Solitary fibrous tumor - hemangiopericytoma ventricle 003.jpg Hemangiopericytoma T1      255      257
-                                                Neurocytoma T1\T1 - Central neurocytoma frontal 001.jpg        Neurocytoma T1      265      261
-                                                Neurocytoma T1\T1 - Central neurocytoma frontal 006.jpg        Neurocytoma T1      264      247
-                           Neurocytoma T1\T1 - Central neurocytoma intraventricular , ventricle 003.jpg        Neurocytoma T1      247      251
-                           Neurocytoma T1\T1 - Central neurocytoma intraventricular , ventricle 005.jpg        Neurocytoma T1      247      249
-                                              Neurocytoma T1\T1 - Central neurocytoma ventricle 014.jpg        Neurocytoma T1      265      249
-                                              Neurocytoma T1\T1 - Central neurocytoma ventricle 017.jpg        Neurocytoma T1      264      251
-                                Neurocytoma T1C+\T1C+ - Central neurocytoma frontal , ventricle 016.jpg      Neurocytoma T1C+      253      258
-                                            Neurocytoma T1C+\T1C+ - Central neurocytoma frontal 003.jpg      Neurocytoma T1C+      247      247
-                                            Neurocytoma T1C+\T1C+ - Central neurocytoma frontal 005.jpg      Neurocytoma T1C+      247      249
-                                            Neurocytoma T1C+\T1C+ - Central neurocytoma frontal 006.jpg      Neurocytoma T1C+      259      247
-                                   Neurocytoma T1C+\T1C+ - Central neurocytoma intraventricular 001.jpg      Neurocytoma T1C+      247      258
-                                                        Neurocytoma T2\T2 - Central neurocytoma 010.jpg        Neurocytoma T2      256      248
-                                    Neurocytoma T2\T2 - Central neurocytoma frontal , ventricle 001.jpg        Neurocytoma T2      262      250
-                                                Neurocytoma T2\T2 - Central neurocytoma frontal 003.jpg        Neurocytoma T2      247      258
-                                                Neurocytoma T2\T2 - Central neurocytoma frontal 004.jpg        Neurocytoma T2      247      256
-                                                Neurocytoma T2\T2 - Central neurocytoma frontal 008.jpg        Neurocytoma T2      249      264
-                                                Neurocytoma T2\T2 - Central neurocytoma frontal 011.jpg        Neurocytoma T2      253      250
-                                       Neurocytoma T2\T2 - Central neurocytoma intraventricular 002.jpg        Neurocytoma T2      256      252
-                                       Neurocytoma T2\T2 - Central neurocytoma intraventricular 003.jpg        Neurocytoma T2      247      254
-                                              Neurocytoma T2\T2 - Central neurocytoma ventricle 006.jpg        Neurocytoma T2      252      262
-                                              Neurocytoma T2\T2 - Central neurocytoma ventricle 025.jpg        Neurocytoma T2      251      262
-                                              Neurocytoma T2\T2 - Central neurocytoma ventricle 026.jpg        Neurocytoma T2      250      261
-                                              Neurocytoma T2\T2 - Central neurocytoma ventricle 027.jpg        Neurocytoma T2      252      263
-                                              Neurocytoma T2\T2 - Central neurocytoma ventricle 028.jpg        Neurocytoma T2      252      263
-                                              Neurocytoma T2\T2 - Central neurocytoma ventricle 030.jpg        Neurocytoma T2      252      261
-                                              Neurocytoma T2\T2 - Central neurocytoma ventricle 031.jpg        Neurocytoma T2      252      261
-                                              Neurocytoma T2\T2 - Central neurocytoma ventricle 032.jpg        Neurocytoma T2      252      261
-                                              Neurocytoma T2\T2 - Central neurocytoma ventricle 033.jpg        Neurocytoma T2      252      261
-                                              Neurocytoma T2\T2 - Central neurocytoma ventricle 036.jpg        Neurocytoma T2      248      259
-                                              Neurocytoma T2\T2 - Central neurocytoma ventricle 037.jpg        Neurocytoma T2      250      256
-                                              Neurocytoma T2\T2 - Central neurocytoma ventricle 038.jpg        Neurocytoma T2      250      256
-                                              Neurocytoma T2\T2 - Central neurocytoma ventricle 047.jpg        Neurocytoma T2      255      248
-                                              Neurocytoma T2\T2 - Central neurocytoma ventricle 053.jpg        Neurocytoma T2      248      251
-                                               Oligodendroglioma T1\T1 - Oligodendroglioma falx 002.jpg  Oligodendroglioma T1      263      257
-                                                  Other T1\T1 - Colloid cyst frontal , parietal 001.jpg              Other T1      251      260
-                                                  Other T1\T1 - Colloid cyst frontal , parietal 002.jpg              Other T1      251      260
-                                                  Other T1\T1 - Colloid cyst frontal , parietal 003.jpg              Other T1      251      262
-                                                      Other T1\T1 - Colloid cyst supratentorial 002.jpg              Other T1      252      250
-                                                      Other T1\T1 - Colloid cyst supratentorial 003.jpg              Other T1      252      248
-                                                      Other T1\T1 - Colloid cyst supratentorial 004.jpg              Other T1      252      250
-                                                      Other T1\T1 - Colloid cyst supratentorial 005.jpg              Other T1      252      248
-                                                      Other T1\T1 - Colloid cyst supratentorial 007.jpg              Other T1      252      248
-                                                      Other T1\T1 - Colloid cyst supratentorial 008.jpg              Other T1      252      250
-                                                      Other T1\T1 - Colloid cyst supratentorial 009.jpg              Other T1      252      250
-                                                      Other T1\T1 - Colloid cyst supratentorial 010.jpg              Other T1      252      248
-                                                 Other T1\T1 - Colloid cyst ventricle , frontal 002.jpg              Other T1      256      248
-                                                           Other T1\T1 - Colloid cyst ventricle 005.jpg              Other T1      252      261
-                                                           Other T1\T1 - Colloid cyst ventricle 006.jpg              Other T1      252      264
-                                                           Other T1\T1 - Colloid cyst ventricle 007.jpg              Other T1      255      264
-                                                           Other T1\T1 - Colloid cyst ventricle 008.jpg              Other T1      251      263
-                                                           Other T1\T1 - Colloid cyst ventricle 009.jpg              Other T1      253      262
-                                                           Other T1\T1 - Colloid cyst ventricle 010.jpg              Other T1      253      261
-                                                           Other T1\T1 - Colloid cyst ventricle 011.jpg              Other T1      252      263
-                                                           Other T1\T1 - Colloid cyst ventricle 012.jpg              Other T1      252      262
-                                                           Other T1\T1 - Colloid cyst ventricle 013.jpg              Other T1      252      262
-                                                           Other T1\T1 - Colloid cyst ventricle 014.jpg              Other T1      252      263
-                                                           Other T1\T1 - Colloid cyst ventricle 015.jpg              Other T1      252      263
-                                                           Other T1\T1 - Colloid cyst ventricle 016.jpg              Other T1      252      263
-                                                  Other T1C+\T1C+ - Colloid cyst supratentorial 009.jpg            Other T1C+      252      248
-                                                  Other T1C+\T1C+ - Colloid cyst supratentorial 010.jpg            Other T1C+      252      248
-                                                  Other T1C+\T1C+ - Colloid cyst supratentorial 011.jpg            Other T1C+      252      248
-                                                       Other T1C+\T1C+ - Colloid cyst ventricle 019.jpg            Other T1C+      247      250
-                                                       Other T1C+\T1C+ - Colloid cyst ventricle 024.jpg            Other T1C+      248      248
-                                                       Other T1C+\T1C+ - Colloid cyst ventricle 025.jpg            Other T1C+      252      261
-                                                       Other T1C+\T1C+ - Colloid cyst ventricle 026.jpg            Other T1C+      250      261
-                              Other T1C+\T1C+ - Dural solitary fibrous tumor parafalcine , falx 001.jpg            Other T1C+      264      259
-                              Other T1C+\T1C+ - Dural solitary fibrous tumor parafalcine , falx 002.jpg            Other T1C+      264      260
-                              Other T1C+\T1C+ - Dural solitary fibrous tumor parafalcine , falx 003.jpg            Other T1C+      264      260
-                              Other T1C+\T1C+ - Dural solitary fibrous tumor parafalcine , falx 004.jpg            Other T1C+      264      260
-                              Other T1C+\T1C+ - Dural solitary fibrous tumor parafalcine , falx 005.jpg            Other T1C+      264      260
-                              Other T1C+\T1C+ - Dural solitary fibrous tumor parafalcine , falx 006.jpg            Other T1C+      264      260
-                              Other T1C+\T1C+ - Dural solitary fibrous tumor parafalcine , falx 007.jpg            Other T1C+      265      260
-                                                  Other T2\T2 - Colloid cyst frontal , parietal 001.jpg              Other T2      256      260
-                                                  Other T2\T2 - Colloid cyst frontal , parietal 002.jpg              Other T2      256      261
-                                                  Other T2\T2 - Colloid cyst frontal , parietal 003.jpg              Other T2      257      265
-                                                      Other T2\T2 - Colloid cyst supratentorial 001.jpg              Other T2      255      249
-                                                      Other T2\T2 - Colloid cyst supratentorial 002.jpg              Other T2      253      249
-                                                 Other T2\T2 - Colloid cyst ventricle , frontal 001.jpg              Other T2      255      247
-                                                 Other T2\T2 - Colloid cyst ventricle , frontal 002.jpg              Other T2      255      247
-                                                           Other T2\T2 - Colloid cyst ventricle 010.jpg              Other T2      252      259
-                                                           Other T2\T2 - Colloid cyst ventricle 011.jpg              Other T2      252      263
-                                                           Other T2\T2 - Colloid cyst ventricle 012.jpg              Other T2      252      262
+──────────────────────────────────────────────────────────────
+  HIGH-LEVEL SUMMARY
+──────────────────────────────────────────────────────────────
+  Total images            : 11,278
+  Unique classes          : 30
+  Unique tumor types      : 20
+  Normal images           : 1,058
+  Abnormal images         : 10,220
+  Images with location tag: 9,290
 
-  Per-class point stats saved → points_stats.csv
-
-────────────────────────────────────────────────────────────
-  CLASS BALANCE
-────────────────────────────────────────────────────────────
-  Most common class  : Meningioma T1C+  (977 images)
-  Least common class : Hemangiopericytoma T2  (118 images)
-  Imbalance ratio    : 8.3x
-
-────────────────────────────────────────────────────────────
-  WEIGHTING BALANCE (T1 / T1C+ / T2)
-────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────
+  WEIGHTING BALANCE
+──────────────────────────────────────────────────────────────
 weighting
-T1C+    4678
-T1      3646
-T2      2976
+Unknown    4669
+T1         3646
+T2         2963
 
-────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────
+  CLASS BALANCE
+──────────────────────────────────────────────────────────────
+  Most common  : Meningioma T1C+  (977)
+  Least common : Hemangiopericytoma T2  (118)
+  Imbalance    : 8.3x
+
+──────────────────────────────────────────────────────────────
+  LESION POINT STATISTICS (abnormal only)
+──────────────────────────────────────────────────────────────
+  X — mean: 253.8  std: 53.0  min: 101  max: 403
+  Y — mean: 272.5  std: 60.4  min: 65  max: 460
+
+  Points within 10px of centre in abnormal classes: 115
+  Note: these are anatomically valid midline tumors (Colloid cysts,
+        Diffuse midline gliomas, Central neurocytomas) — do NOT exclude.
+
+  Per-class point stats → points_stats.csv
+
+──────────────────────────────────────────────────────────────
   LOCATION TAGS
-────────────────────────────────────────────────────────────
-ventricle                 4696
-frontal                   2268
+──────────────────────────────────────────────────────────────
+ventricle                 4674
+frontal                   2246
 temporal                  1289
 brainstem                  939
 cerebellopontine angle     913
@@ -252,16 +124,14 @@ petrous ridge               17
 olfactory groove            15
 paraclinoid                 15
 
-────────────────────────────────────────────────────────────
-  ✅ Full manifest saved → full_manifest.csv  (11,300 rows)
-
-────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────
   RECOMMENDED SPLIT SIZES (80 / 10 / 10 stratified)
-────────────────────────────────────────────────────────────
-  Train : ~9,040
-  Val   : ~1,130
-  Test  : ~1,130  (lock this — never touch until final eval)
+──────────────────────────────────────────────────────────────
+  Train : ~9,022
+  Val   : ~1,127
+  Test  : ~1,127  ← lock until final eval
 
-============================================================
-  INSPECTION COMPLETE
-============================================================
+==============================================================
+   full_manifest.csv saved  (11,278 rows)
+  Pass this file to dataset.py — nothing else reads metadata.json
+==============================================================
